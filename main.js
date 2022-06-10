@@ -26,7 +26,7 @@ const responses = [
 ]
 
 const askQuestion = () => {
-  if (question.value == "") {
+  if (question.value == "" || !question.value.endsWith("?")) {
     questionResponse.innerHTML = "Nenhuma pergunta."
     response.innerHTML = "Pergunte, burro!"
     return
