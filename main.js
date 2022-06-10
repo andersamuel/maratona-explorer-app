@@ -22,7 +22,7 @@ const responses = [
   "As perspectivas não são tão boas.",
   "Sim.",
   "Concentre-se e pergunte novamente.",
-  "Sinais apontam que sim.",
+  "Sinais apontam que sim."
 ]
 
 const askQuestion = () => {
@@ -36,6 +36,7 @@ const askQuestion = () => {
     const randomNumber = Math.floor(Math.random() * totalResponse)
     questionResponse.innerHTML = question.value
     response.innerHTML = responses[randomNumber]
+    question.value = ""
     setTimeout(() => {
       button.removeAttribute("disabled")
     }, 3000)
